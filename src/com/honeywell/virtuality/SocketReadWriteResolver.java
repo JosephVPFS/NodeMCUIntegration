@@ -28,11 +28,12 @@ public class SocketReadWriteResolver {
 			module = getWriter(socketString);
 		}else {
 			module = nodeModules.get(socketString);
+			if(module != null) {
+				module.doReadOrCommand(this);
+			}
 		}
 		
-		if(module != null) {
-			module.doReadOrCommand(this);
-		}
+		
 	}
 
 	public String getCommand() {
