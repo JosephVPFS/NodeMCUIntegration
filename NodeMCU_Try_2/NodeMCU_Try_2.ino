@@ -36,7 +36,7 @@ void loop() {
   {
     Serial.print("Connected to: ");
     Serial.println(host);
-
+	client.println ("ACTUATOR");
     /* Wait for data for 5 seconds at most before timing out */
     unsigned long timeout = millis();
     while(client.available() == 0)

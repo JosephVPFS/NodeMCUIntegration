@@ -38,6 +38,7 @@ void loop() {
   
   if (client.connect(host, 9090))
   {
+	client.println ("SENSOR");
     Serial.print("Connected to: ");
     Serial.println(host);
     //client.println ("analogRead");
